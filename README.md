@@ -42,5 +42,8 @@ Bases sur le javascript
    Les conditions
    Les opérateurs logiques : ET, OU, NON
     
+   Les boucles
+   
+   Les fonctions
    
     
