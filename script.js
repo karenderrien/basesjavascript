@@ -308,3 +308,98 @@ for (var i=0, nicks = '', nick; true;i++) {
 	}
 
 	alert('Il y a '+i+' prénoms:\n\n'+ nicks);
+	
+/* créer une fonction avec declaration de variables locales
+se trouvant au sein d'une scope (!= variables globales se trouve dans le code
+en dehors de la fonction)
+function calculate() {
+    var var1 = 2,
+        var2 = 3;
+    alert(var1 * var2);
+}
+
+calculate();
+	
+/* créer une fonction avec des arguments
+function moar(first, second) {
+    // On peut maintenant utiliser les variables « first » et « second » comme on le souhaite :
+    alert('Votre premier argument : ' + first);
+    alert('Votre deuxième argument : ' + second);
+	}
+	
+/* fonction avec argument facultatif à mettre à la fin allowCancel
+function prompt2(text, allowCancel) {
+
+    if (typeof allowCancel === 'undefined') { // Souvenez-vous de typeof, pour vérifier le type d'une variable
+        allowCancel = false;
+    }
+
+    // Le code… que l'on ne créera pas =p
+}
+
+prompt2('Entrez quelque chose :'); // On exécute la fonction seulement avec le premier argument, pas besoin du deuxième
+
+/* valeurs de retour (uen seule et unique par fonction sauf tableau ou objet)
+function sayHello() {
+    return 'Bonjour !'; // L'instruction « return » suivie d'une valeur, cette dernière est donc renvoyée par la fonction
+}
+
+alert(sayHello()); // Ici on affiche la valeur retournée par la fonction sayHello()
+
+/* fonctions anonymes (très importants - les bases)
+var sayHello = function() {
+    alert('Bonjour !');
+};
+sayHello(); // Affiche : « Bonjour ! »
+
+/* fonctions anonymes : isoler son code
+Immediately-Invoked-Function-Expression ou IIFE
+impossible de les appeler donc faire IIFE automatiquement
+(function(){
+	//code isolé
+})();
+
+/* fonction anonyme et portée des variables
+
+var test = 'noir'; // On crée une variable « test » contenant le mot « noir »
+
+(function() { // Début de la zone isolée
+
+    var test = 'blanc'; // On crée une variable du même nom avec le contenu « blanc » dans la zone isolée
+  
+    alert('Dans la zone isolée, la couleur est : ' + test);
+
+})(); // Fin de la zone isolée. Les variables créées dans cette zone sont détruites.
+
+alert('Dans la zone non-isolée, la couleur est : ' + test); // Le texte final contient bien le mot « noir » vu que la « zone isolée » n'a aucune influence sur le reste du code
+
+/* enregistrer dans le code global une des valeurs
+générées dans la zone isolée
+
+var sayHello = (function() {
+
+    return 'Yop !';
+
+})();
+
+alert(sayHello); // Affiche : « Yop ! »
+
+
+/* demander un nombre et vérifier si c'est un nombre
+si true alors recommencer
+si false retourner le nombre
+
+function askNumber() {
+    var string, number;
+	
+    while (true) {
+        string = prompt('Entrez un nombre entier positif');		
+        number = parseInt(string);
+		
+        if (!isNaN(number)) { // C'est bien un nombre
+            return number;
+        }
+    }
+}
+
+
