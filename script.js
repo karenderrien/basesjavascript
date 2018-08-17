@@ -402,4 +402,126 @@ function askNumber() {
     }
 }
 
+/* Les objets
+
+var myString = 'Ceci est une chaîne de caractères';
+// On crée un objet String
+
+alert(myString.length);
+// On affiche le nombre de caractères, au moyen de la propriété « length »
+
+alert(myString.toUpperCase());
+// On récupère la chaîne en majuscules, avec la méthode toUpperCase()
+
+/* Les tableaux
+tableau=array contient plusieurs valeurs, appelées items
+attention - chaque item est accesible au moyen d'indice
+et -attention-la numérotation commence par zéro
+
+Déclarer un tableau
+var myArray = ['Sébastien', 'Laurence', 'Ludovic', 'Pauline', 'Guillaume'];
+ou
+var myArray = [42,12,2];
+
+Récupérer ou modifier des valeurs :
+
+Récupérer
+var myArray = ['Sébastien', 'Laurence', 'Ludovic', 'Pauline', 'Guillaume'];
+
+alert(myArray[1]); // Affiche : « Laurence »
+
+Modifier une valeur
+var myArray = ['Sébastien', 'Laurence', 'Ludovic', 'Pauline', 'Guillaume'];
+
+myArray[1] = 'Clarisse';
+
+alert(myArray[1]); // Affiche : « Clarisse »
+
+Opérations sur les tableaux
+
+Ajouter des items
+
+var myArray = ['Sébastien', 'Laurence'];
+
+myArray.push('Ludovic');
+// Ajoute « Ludovic » à la fin du tableau
+myArray.push('Pauline', 'Guillaume');
+// Ajoute « Pauline » et « Guillaume » à la fin du tableau
+
+Supprimer des items
+var myArray = ['Sébastien', 'Laurence', 'Ludovic', 'Pauline', 'Guillaume'];
+
+myArray.shift(); // Retire « Sébastien »
+myArray.pop(); // Retire « Guillaume »
+
+alert(myArray); // Affiche « Laurence,Ludovic,Pauline »
+
+Chaine de caractere et tableau
+1 - transformer une cdc en tableau
+var cousinsString = 'Pauline Guillaume Clarisse',
+    cousinsArray = cousinsString.split(' ');
+
+alert(cousinsString);
+alert(cousinsArray);
+
+2 - créer une cdc à partir d'un tableau
+var cousinsString_2 = cousinsArray.join('-');
+
+alert(cousinsString_2);
+
+Ici, une chaîne de caractères va être créée,
+ et les valeurs de chaque item seront séparées
+ par un tiret. Si vous ne spécifiez rien comme
+ séparateur, les chaînes de caractères seront 
+ collées les unes aux autres.
+ 
+ PARCOURIR UN TABLEAU
+ 
+ for (var i = 0, c = myArray.length; i < c; i++) {
+	
+    alert(myArray[i]);
+		
+}
+
+LES OBJETS LITTERAUX
+
+var myObject = {
+	item1: 'texte 1',
+	item2: ' texte 2'
+};
+
+var family = {
+    self: 'Sébastien',
+    sister: 'Laurence',
+    brother: 'Ludovic',
+    cousin_1: 'Pauline',
+    cousin_2: 'Guillaume'
+};
+
+Acces aux items :
+
+family.sister;
+ou
+family['sister'];
+ou
+var id = 'sister';
+
+alert(family[id]); // Affiche : « Laurence »
+
+Ajouter des items :
+
+family['uncle'] = 'Didier'; 
+// « Didier » est ajouté et est accessible via
+ l'identifiant « uncle »
+ ou
+family.uncle = 'Didier'; 
+// Même opération mais d'une autre manière
+
+PARCOURIR UN OBJET AVEC FOR IN
+
+for (var id in family) { // On stocke l'identifiant dans « id » pour parcourir l'objet « family »
+	
+    alert(family[id]);
+		
+}
 
