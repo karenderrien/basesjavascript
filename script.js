@@ -402,7 +402,7 @@ function askNumber() {
     }
 }
 
-/* Les objets
+/* LES OBJETS
 
 var myString = 'Ceci est une chaîne de caractères';
 // On crée un objet String
@@ -517,11 +517,48 @@ family['uncle'] = 'Didier';
 family.uncle = 'Didier'; 
 // Même opération mais d'une autre manière
 
-PARCOURIR UN OBJET AVEC FOR IN
+Parcourir un objet littéral AVEC FOR IN
 
 for (var id in family) { // On stocke l'identifiant dans « id » pour parcourir l'objet « family »
 	
-    alert(family[id]);
+    alert(id + ' : ' + family[id]);
 		
+}
+
+exemple classique d'utilisation : fonction qui calcule des
+coordonnées d'un élément HTML sur une page Web.
+Il faut ici retourner les coordonnées x et y.
+
+function getCoords() {
+	// Script incomplet, juste pour l'exemple 
+
+    return {
+        x: 12,
+        y: 21
+    };
+}
+
+var coords = getCoords();
+
+alert(coords.x); // 12
+alert(coords.y); // 21
+
+Exercice avec les prenoms
+
+var nicks = [], // Création du tableau vide
+    nick;
+
+while (nick = prompt('Entrez un prénom :')) { 
+// Si la valeur assignée à la variable « nick »
+est valide (différente de « null ») alors la boucle
+s'exécute
+    nicks.push(nick); // Ajoute le nouveau prénom
+	au tableau
+}
+
+if (nicks.length > 0) { // On regarde le nombre d'items
+    alert(nicks.join(' ')); // Affiche les prénoms à la suite
+} else {
+    alert('Il n\'y a aucun prénom en mémoire !');
 }
 
