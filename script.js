@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-﻿/*demander le nom
+/*demander le nom
 var username=prompt('Entrez votre nom:');
 		alert(username);//affiche le nom*/
 
@@ -91,7 +90,7 @@ alert(result); // Affiche « false »*/
 var result = 2 > 8 && 8 > 2;
 alert(result); // Affiche « false »*/
 
-﻿/*demander le nom
+/* demander le nom
 var username=prompt('Entrez votre nom:');
 		alert(username);//affiche le nom*/
 
@@ -585,4 +584,6 @@ function c(value) {
 for (var i = 0; i < 10; i++) {
     c(i);
 }
+
+*/
 
