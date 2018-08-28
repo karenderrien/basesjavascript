@@ -587,3 +587,224 @@ for (var i = 0; i < 10; i++) {
 
 */
 
+/*exercice transformer un chiffre en lettre 0 à 999
+<script>
+		function num2letters(number){
+			if (isNaN(number)||number<0||999<number){
+				return 'Veuillez entrer un nombre entier compris entre 1 et 999';
+			}
+
+		//tableau des unités et des dizaines
+		var unitnumber=['','un','deux','trois','quatre','cinq','six','sept','huit','neuf'],
+			tennumber=['','dix','vingt','trente','quarante','cinquante','soixante','soixante-dix','quatre-vingt','quatre-vingt-dix'];
+		
+		// séparation des unites, dizaines, centaines
+		var units=number%10,
+			tens=(number%100-u)/10,
+			hundreds=(number%1000-number%100)/100;
+		// création des variables qui vont contenir les chiffres en lettre	
+		var unitsOut, tensOut, hundredOut;
+
+		if (number===0){
+			return'zéro';
+		}else{
+			//Traitement des unités
+			unitsOut = (units === 1 && tens>0 && tens!==8 ? 'et-' : '') + units2letter[units];
+		}
+
+			//Traitement des dizaines
+			if (tens === 1 && units > 0) {
+
+				tensOut = units2Letters[10 + units];
+				unitsOut = '';
+
+			} else if (tens === 7 || tens === 9) {
+
+				tensOut = tens2Letters[tens] + '-' + (tens === 7 && units === 1 ? 'et-' : '') + units2Letters[10 + units];
+				unitsOut = '';
+
+			} else {
+
+			tensOut = tens2Letters[tens];
+
+			
+
+			tensOut += (units === 0 && tens === 8 ? 's' : '');
+
+			//Traitement des centaines
+
+			hundredsOut = (hundreds > 1 ? units2Letters[hundreds] + '-' : '') + (hundreds > 0 ? 'cent' : '') + (hundreds > 1 && tens == 0 && units == 0 ? 's' : '');
+
+			// Retour du total
+
+			return hundredsOut + (hundredsOut && tensOut ? '-' : '') + tensOut + (hundredsOut && unitsOut || tensOut && unitsOut ? '-' : '') + unitsOut;
+
+		}
+	}
+
+
+
+
+
+		var userEntry; //le texte entré par l'utilisateur
+
+		while (userEntry=prompt('Indiquez le nombre à écrire en toutes lettres (entre 0 et 999) : ')){
+			alert(num2letters(parseInt(userEntry, 10)));
+		}
+			
+		
+	</script>*/
+
+	/*AADEVENTLISTENER = a utiliser absolument pour gérer les évènements
+on accède au premier paragraphe
+var p1=document.querySelector('p');
+
+//on accroche un evenement au paragraphe
+p1.addEventListener('click',message1);
+p1.addEventListener('click',message2);
+
+//on crée les fonctions
+function message1(){
+	alert('message 1');
+}
+function message2(){
+	alert('message 2');
+}
+
+
+script evenement avec mouseover etc
+
+//on affecte un évènement au paragraphe
+//on ne met pas les () sinon la fonction va se déclencher automatiquement
+//et on veut que la fonction se déclenche lorsque l'évènement se produit
+p1.addEventListener('mouseover',fonction1);//mouseover=passage du curseur sur l'élément
+p1.addEventListener('mouseout',reset1);//mouseout=le curseur sort de l'élément
+p1.addEventListener('mousedown',fonction2);//mousedown=click sur l'élément
+p1.addEventListener('mouseup',reset2);//mouseup=quand le click se relache
+
+on crée les fonctions
+function fonction1(){
+	this.innerHTML="Cliquez-moi !";
+	this.style.backgroundColor="orange";
+}
+function reset1(){
+	this.innerHTML="Passez sur moi !";
+	this.style.backgroundColor="";
+}
+
+
+function fonction2(){
+	this.innerHTML="Bravo !";
+	this.style.color='bleu';
+	this.fontSize="24px";
+	this.fontWeight='bold';
+}
+
+function reset2(){
+	this.innerHTML="";
+	this.style.color='';
+	this.fontSize="";
+	this.fontWeight='';
+}*/
+
+
+/*exemple de gestion d'évènements en capture et bouillonnement
+<!DOCTYPE>
+<html>
+<head>
+	
+	<meta charset="utf-8">
+	<meta name="description" value="Exercice openclassroom sur le Javascript">
+	<meta name="author" value="Karen Derrien">
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<title>Bases de Javascript</title>
+	<style>
+		div{
+			border: 1px solid orange;
+			background-color: aqua;
+			padding: 10px;
+			margin: 10px;
+		}
+	</style>
+</head>
+
+<body>
+
+<h1>Les évènements : La capture et le bouillonnement</h1>
+
+<div id='div1'>
+	<p id='p1'>Phase de bouillonnement au clic</p>
+</div>
+
+<div id='div2'>
+	<p id='p2'>Phase de <strong>capture</strong> au clic</p>
+</div>
+
+
+
+<script>
+//on accède au body, puis 
+	var body=document.body;
+	var dv1=document.getElementById('div1');
+	var p1=document.getElementById('p1');
+	var div2=document.getElementById('div2');
+	var p2=document.getElementById('p2');
+	var strong=document.querySelector('strong');
+
+//on accroche un évènement aux éléments div et p
+//phase de bouillonnement (quand ca remonte)
+p1.addEventListener('click',messagep1);
+div1.addEventListener('click',messagediv1);
+body.addEventListener('click',messagebody);
+
+//phase de capture (quand ca descend au debut)
+p2.addEventListener('click',messagep2,true);
+strong.addEventListener('click',messagestrong,true);
+
+
+//on crée les fonctions
+function messagep1(){alert('bouillonnement du paragraphe 1');};
+function messagediv1(){alert('bouillonnement du div1');};
+function messagebody(){alert('bouillonnement du body');};
+function messagep2(){alert('capture du paragraphe 2');};
+function messagestrong(){alert('capture du strong');};
+
+
+</script>
+	
+		
+<footer>Copyright 2018</footer>	
+	
+</body>
+</html>	
+*/
+
+
+/*Objet Event avec les propriétés target, currentTarget et Type
+<body>
+
+<h1 id='gros_titre'>L'objet event</h1>
+
+<div id='div1'>
+	<p>Qui est l'élément déclencheur ? Qui est l'élément porteur ?</p>
+</div>
+
+<script>
+var div1=document.getElementById('div1');
+var p1=document.querySelector('p');
+
+div1.addEventListener('click', messagediv1,true);
+p1.addEventListener('click',messagep1, true);
+
+function messagediv1(event){
+	this.innerHTML="L'élément déclencheur est :"+ event.target +
+	"<br/>L'élément porteur est :" + event.currentTarget +
+	"<br/> Le type d'évènement est :"+ event.type;
+}
+</script>
+	
+		
+<footer>Copyright 2018</footer>	
+	
+</body>
+*/

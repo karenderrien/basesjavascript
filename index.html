@@ -7,80 +7,30 @@
 	<meta name="author" value="Karen Derrien">
 	<link rel="stylesheet" type="text/css" href="style.css" />
 	<title>Bases de Javascript</title>
+	<style>
+		div{
+			border: 1px solid orange;
+			background-color: aqua;
+			padding: 10px;
+			margin: 10px;
+		}
+	</style>
 </head>
 
 <body>
 
+<h1 id='gros_titre'>L'objet event</h1>
 
-	<script>
-		function num2letters(number){
-			if (isNaN(number)||number<0||999<number){
-				return 'Veuillez entrer un nombre entier compris entre 1 et 999';
-			}
+<div id='div1'>
+	<p></p>
+</div>
 
-		//tableau des unités et des dizaines
-		var unitnumber=['','un','deux','trois','quatre','cinq','six','sept','huit','neuf'],
-			tennumber=['','dix','vingt','trente','quarante','cinquante','soixante','soixante-dix','quatre-vingt','quatre-vingt-dix'];
-		
-		// séparation des unites, dizaines, centaines
-		var units=number%10,
-			tens=(number%100-u)/10,
-			hundreds=(number%1000-number%100)/100;
-		// création des variables qui vont contenir les chiffres en lettre	
-		var unitsOut, tensOut, hundredOut;
+<script>
 
-		if (number===0){
-			return'zéro';
-		}else{
-			//Traitement des unités
-			unitsOut = (units === 1 && tens>0 && tens!==8 ? 'et-' : '') + units2letter[units];
-		}
-
-			//Traitement des dizaines
-			if (tens === 1 && units > 0) {
-
-				tensOut = units2Letters[10 + units];
-				unitsOut = '';
-
-			} else if (tens === 7 || tens === 9) {
-
-				tensOut = tens2Letters[tens] + '-' + (tens === 7 && units === 1 ? 'et-' : '') + units2Letters[10 + units];
-				unitsOut = '';
-
-			} else {
-
-			tensOut = tens2Letters[tens];
-
-			
-
-			tensOut += (units === 0 && tens === 8 ? 's' : '');
-
-			//Traitement des centaines
-
-			hundredsOut = (hundreds > 1 ? units2Letters[hundreds] + '-' : '') + (hundreds > 0 ? 'cent' : '') + (hundreds > 1 && tens == 0 && units == 0 ? 's' : '');
-
-			// Retour du total
-
-			return hundredsOut + (hundredsOut && tensOut ? '-' : '') + tensOut + (hundredsOut && unitsOut || tensOut && unitsOut ? '-' : '') + unitsOut;
-
-		}
-	}
-
-
-
-
-
-		var userEntry; //le texte entré par l'utilisateur
-
-		while (userEntry=prompt('Indiquez le nombre à écrire en toutes lettres (entre 0 et 999) : ')){
-			alert(num2letters(parseInt(userEntry, 10)));
-		}
-			
-		
-	</script>
+</script>
 	
 		
-	
+<footer>Copyright 2018</footer>	
 	
 </body>
 </html>
