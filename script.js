@@ -808,3 +808,53 @@ function messagediv1(event){
 	
 </body>
 */
+
+/*EMPECHER LA PROPAGATION DES EVENEMENTS
+<h1 id='gros_titre'>Les évènements</h1>
+
+<div id='div1'>
+	<p>Propagation des évènements</p>
+</div>
+
+<script>
+//on accède au div et au paragraphe
+var div1=document.getElementById('div1');
+var para=document.querySelector('p');
+
+//on accroche un évènement capture au div et au para 
+div1.addEventListener('click',messageDiv,true);
+para.addEventListener('click',messagePara,true);
+
+//on crée la fonction qui va alerter et on empêche la propagation
+function messageDiv(event){
+	alert('On empêche la propagation');
+	event.stopPropagation();
+}
+
+</script>*/
+
+/*EMPECHER L'EXECUTION D'UN GESTIONNAIRE D'EVENEMENT
+<h1 id='gros_titre'>Les évènements</h1>
+
+<div id='div1'>
+	<p>Propagation des évènements</p>
+</div>
+
+<script>
+//on accède au div et au paragraphe
+var div1=document.getElementById('div1');
+var para=document.querySelector('p');
+
+//on accroche un évènement capture au div et au para 
+div1.addEventListener('click',messageDiv,true);
+para.addEventListener('click',messagePara,true);
+
+//on crée la fonction qui va supprimer l'évènement du div
+function messageDiv(event){
+	div.preventDefault();
+}
+function messagePara(){
+	alert('La suppression du div n\'empêche pas l\'éxécution du para');
+}
+
+</script>*/
