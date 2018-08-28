@@ -858,3 +858,45 @@ function messagePara(){
 }
 
 </script>*/
+
+/*
+<!--Récupérer la position du curseur-->
+
+<div id="position"></div>
+
+<script>
+    var position = document.getElementById('position');
+  
+    document.addEventListener('mousemove', function(e) {
+        position.innerHTML = 'Position X : ' + e.clientX + 'px<br />Position Y : ' + e.clientY + 'px';
+    });
+</script>*/
+
+/*<!--Récupérer l'élément en relation avec un événement de souris-->
+
+<p id="result"></p>
+
+<div id="parent1">
+    Parent N°1<br /> Mouseover sur l'enfant
+    <div id="child1">Enfant N°1</div>
+</div>
+
+<div id="parent2">
+    Parent N°2<br /> Mouseout sur l'enfant
+    <div id="child2">Enfant N°2</div>
+</div>
+
+<script>
+    var child1 = document.getElementById('child1'),
+        child2 = document.getElementById('child2'),
+        result = document.getElementById('result');
+
+    child1.addEventListener('mouseover', function(e) {
+        result.innerHTML = "L'élément quitté juste avant que le curseur n'entre sur l'enfant n°1 est : " + e.relatedTarget.id;
+    });
+
+    child2.addEventListener('mouseout', function(e) {
+        result.innerHTML = "L'élément survolé juste après que le curseur ait quitté l'enfant n°2 est : " + e.relatedTarget.id;
+    });
+</script>*/
+
