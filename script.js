@@ -940,4 +940,49 @@ function messagePara(){
 		});
 	</script>*/
 
+/*
+	<!DOCTYPE>
+<html>
+<head>
 	
+	<meta charset="utf-8">
+	<meta name="description" value="Exercice openclassroom sur le Javascript">
+	<meta name="author" value="Karen Derrien">
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<title>Browser Object Model</title>
+	<style></style>
+</head>
+
+<body>
+<h1>LE BOM</h1>
+
+<button id='ouvrir'>Ouvrir une nouvelle fenêtre</button>
+<button id='modifier'>Redimensionner la fenêtre</button>
+<button id='fermer'>Fermer la fenêtre</button>
+
+<script>
+//on accède aux boutons
+var ouvrir=document.getElementById('ouvrir');
+var modifier=document.getElementById('modifier');
+var fermer=document.getElementById('fermer');
+var fenetre='';
+
+//on accroche un évènement aux boutons
+ouvrir.addEventListener('click', fOuvrir);
+modifier.addEventListener('click', fModifier);
+fermer.addEventListener('click', fFermer);
+
+//on crée les fonctions
+function fOuvrir(){
+	fenetre=window.open('https://lamaisonduweb56.net', '_blank', 'width=500');
+}
+
+function fModifier(){
+	fenetre.resizeTo(300,300);
+}
+
+function fFermer(){
+	fenetre.close();
+}
+</script>*/
+
