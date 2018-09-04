@@ -13,34 +13,41 @@
 <body>
 <h1>LE BOM</h1>
 
-<button id='ouvrir'>Ouvrir une nouvelle fenêtre</button>
-<button id='modifier'>Redimensionner la fenêtre</button>
-<button id='fermer'>Fermer la fenêtre</button>
+<button id='precedent'>Charger la page précédente</button>
+<button id='suivant'>Charger la page suivante</button>
+<button id='specifique'>3 pages avant</button>
+
+<p></p>
 
 <script>
 //on accède aux boutons
-var ouvrir=document.getElementById('ouvrir');
-var modifier=document.getElementById('modifier');
-var fermer=document.getElementById('fermer');
-var fenetre='';
+var para = document.querySelector('p');
+var precedent=document.getElementById('precedent');
+var suivant=document.getElementById('suivant');
+var specifique=document.getElementById('specifique');
+
 
 //on accroche un évènement aux boutons
-ouvrir.addEventListener('click', fOuvrir);
-modifier.addEventListener('click', fModifier);
-fermer.addEventListener('click', fFermer);
+precedent.addEventListener('click', prec);
+suivant.addEventListener('click', suiv);
+specifique.addEventListener('click', spec);
 
 //on crée les fonctions
-function fOuvrir(){
-	fenetre=window.open('https://lamaisonduweb56.net', '_blank', 'width=500');
+function prec(){
+	history.back();
 }
 
-function fModifier(){
-	fenetre.resizeTo(300,300);
+function suiv(){
+	history.forward();
 }
 
-function fFermer(){
-	fenetre.close();
+function spec(){
+	history.go(-3);
 }
+
+var histo=history.length;
+
+para.innerHTML='Nombre d\'URL : '+ histo;
 </script>
 
 

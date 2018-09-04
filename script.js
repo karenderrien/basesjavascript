@@ -940,7 +940,7 @@ function messagePara(){
 		});
 	</script>*/
 
-/*
+/*OUVRIR MODIFIER FERMER UNE FENETRE - OBJET WINDOW
 	<!DOCTYPE>
 <html>
 <head>
@@ -986,3 +986,4 @@ function fFermer(){
 }
 </script>*/
 
+/* OBJET HISTORY - Naviguer dans l'historique*/
