@@ -1026,3 +1026,40 @@ var histo=history.length;
 para.innerHTML='Nombre d\'URL : '+ histo;
 </script>*/
 
+/*<h1>Expressions régulières et JavaScript</h1>
+<p>On apprend à utiliser les regex en JavaScript</p>
+<p id="reg"></p>
+
+<script>
+//On accède au texte de notre paragraphe
+var rec = document.querySelector('p').textContent;
+
+//On veut savoir si notre paragraphe contient au moins un x
+var r1 = /x+/;
+var res1 = r1.test(rec);
+
+//On cherche "e" ou "end" on utilise les () pour fair porter un "?" sur nd
+var r2 = /e(nd)?/g;
+var res2 = rec.match(r2);
+
+//Notre paragraphe fini par un "e" ?
+var r3 = /e$/i;
+var res3 = r3.test(rec);
+
+//Notre paragraphe contient il "pp"
+var r4 = /p{2}/;
+var res4 = r4.test(rec);
+
+//y a t il l'expression Java suivi de Script
+var r5 = /Java(?=Script)/;
+var res5 = r5.test(rec);
+
+var resultat = document.getElementById('reg');
+resultat.innerHTML = 'Résultat 1 : ' + res1 +
+	'<br>Résultat 2 : '+ res2 +
+	'<br>Résultat 3 : '+ res3 +
+	'<br>Résultat 4 : '+ res4 + 
+	'<br>Résultat 5 : '+ res5;
+
+</script>*/
+
