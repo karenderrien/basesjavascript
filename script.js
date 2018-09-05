@@ -986,4 +986,43 @@ function fFermer(){
 }
 </script>*/
 
-/* OBJET HISTORY - Naviguer dans l'historique*/
+/* OBJET HISTORY - Naviguer dans l'historique
+<h1>LE BOM</h1>
+
+<button id='precedent'>Charger la page précédente</button>
+<button id='suivant'>Charger la page suivante</button>
+<button id='specifique'>3 pages avant</button>
+
+<p></p>
+
+<script>
+//on accède aux boutons
+var para = document.querySelector('p');
+var precedent=document.getElementById('precedent');
+var suivant=document.getElementById('suivant');
+var specifique=document.getElementById('specifique');
+
+
+//on accroche un évènement aux boutons
+precedent.addEventListener('click', prec);
+suivant.addEventListener('click', suiv);
+specifique.addEventListener('click', spec);
+
+//on crée les fonctions
+function prec(){
+	history.back();
+}
+
+function suiv(){
+	history.forward();
+}
+
+function spec(){
+	history.go(-3);
+}
+
+var histo=history.length;
+
+para.innerHTML='Nombre d\'URL : '+ histo;
+</script>*/
+
