@@ -1067,7 +1067,7 @@ resultat.innerHTML = 'Résultat 1 : ' + res1 +
 
 <form method="POST" action="traitement.php">
 	<label for="prenom">Entrez votre prénom : </label>
-	<input type="text" name="prenom" id="prenom">
+	<input type="text" name="prenom" id="prenom" required max-length="30">
 	<span id="misPrenom"></span><br>
 
 	<label for="mail">Entrez votre email : </label>
@@ -1083,7 +1083,7 @@ resultat.innerHTML = 'Résultat 1 : ' + res1 +
  var formValid = document.getElementById("bouton-envoi");
  var prenom = document.getElementById("prenom");
  var missPrenom = document.getElementById("missPrenom");
- var prenomValid=/^[a-zA-ZéèêîïÉÈÊÇ][a-zéèêëîï]+([-'\s]^[a-zA-ZéèêîïÉÈÊÇ][a-zéèêëîï])?/;
+ var prenomValid=/^[a-zA-ZéèêîïÉÈÊÇ][a-zéèêëîï]+([-'\s][a-zA-ZéèêîïÉÈÊÇ][a-zéèêëîï]+)?/;
 
  formValid.addEventListener("click",f_valid);
 
