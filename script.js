@@ -1093,14 +1093,13 @@ resultat.innerHTML = 'Résultat 1 : ' + res1 +
 		 event.defaultPrevented();
 		 missPrenom.textContent="Prénom manquant";
 		 missPrenom.style.color="red";
-	 else if (prenomValid.test(prenom.value)){
+	 }else if (prenomValid.test(prenom.value)){
 		 event.preventDefault();
 		 missPrenom.textContent="Format incorrect";
 		 missPrenom.style.color="orange";
 	 }else{
 	 }
 	 }
- }
 
 
 </script>
