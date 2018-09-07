@@ -1063,3 +1063,46 @@ resultat.innerHTML = 'Résultat 1 : ' + res1 +
 
 </script>*/
 
+/*<h1>Formulaires et JavaScript</h1>
+
+<form method="POST" action="traitement.php">
+	<label for="prenom">Entrez votre prénom : </label>
+	<input type="text" name="prenom" id="prenom">
+	<span id="misPrenom"></span><br>
+
+	<label for="mail">Entrez votre email : </label>
+	<input type="email" name="mail" id="mail" required ><br>
+
+	<label for="tel">Entrez votre téléphone</label>
+	<input type="tel" name="tel" id="tel"><br><br>
+
+	<input type="submit" value="valider" id="bouton-envoi">
+</form>
+
+<script>
+ var formValid = document.getElementById("bouton-envoi");
+ var prenom = document.getElementById("prenom");
+ var missPrenom = document.getElementById("missPrenom");
+ var prenomValid=/^[a-zA-ZéèêîïÉÈÊÇ][a-zéèêëîï]+([-'\s]^[a-zA-ZéèêîïÉÈÊÇ][a-zéèêëîï])?/;
+
+ formValid.addEventListener("click",f_valid);
+
+ function f_valid(e){
+	 //si le champ est vide
+	 if (prenom.validity.valueMissing){
+		 event.defaultPrevented();
+		 missPrenom.textContent="Prénom manquant";
+		 missPrenom.style.color="red";
+	 else if (prenomValid.test(prenom.value)){
+		 event.preventDefault();
+		 missPrenom.textContent="Format incorrect";
+		 missPrenom.style.color="orange";
+	 }else{
+	 }
+	 }
+ }
+
+
+</script>
+
+*/
