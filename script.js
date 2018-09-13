@@ -1141,6 +1141,19 @@ resultat.innerHTML = 'Résultat 1 : ' + res1 +
 	contexte.lineWidth="3";
 	contexte.strokeStyle='#OAA';
 	contexte.strokeRect(125,50,300,100);
+
+	//dessiner une ligne ou plusieurs
+	//Coordonnées du premier point de notre triangle rectangle
+	contexte.moveTo(50,50);
+
+	//Coordonnées des lignes de notre triangle rectangle
+	contexte.lineTo(300,150);
+	contexte.lineTo(50,150);
+	contexte.lineTo(50,50);
+
+	//Réalisation du tracé entre nos deux points
+	contexte.stroke();
+
 </script>
 
 <footer>Copyright 2018</footer>	
