@@ -1105,3 +1105,46 @@ resultat.innerHTML = 'Résultat 1 : ' + res1 +
 </script>
 
 */
+/* CANVAS
+<!DOCTYPE>
+<html>
+<head>
+	
+	<meta charset="utf-8">
+	<meta name="description" value="Exercice openclassroom sur le Javascript">
+	<meta name="author" value="Karen Derrien">
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<title>CANVAS ET LES RECTANGLES</title>
+	<style>
+		body{
+			margin: 0px;
+			padding: 0px;
+		}
+		#canvas1{
+			border:2px solid blue;
+		}
+	</style>
+</head>
+
+<body>
+<canvas id="canvas1" width="500" height="250"></canvas>
+
+<script>
+	var canvas = document.getElementById('canvas1');
+	var contexte = canvas.getContext('2d');
+
+	//Rectange plein
+	contexte.fillStyle = 'RGBa(50,200,15,0.5)';
+	contexte.fillRect(50,25,100,50);
+
+	//Rectangle vide
+	contexte.lineWidth="3";
+	contexte.strokeStyle='#OAA';
+	contexte.strokeRect(125,50,300,100);
+</script>
+
+<footer>Copyright 2018</footer>	
+	
+</body>
+</html>
+*/
