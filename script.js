@@ -1154,6 +1154,31 @@ resultat.innerHTML = 'Résultat 1 : ' + res1 +
 	//Réalisation du tracé entre nos deux points
 	contexte.stroke();
 
+	//Plusieurs lignes différentes avec beginPath
+	//premier tracé
+	contexte.beginPath();
+	contexte.lineWidth='5';
+	contexte.strokeStyle='#48C';
+	contexte.moveTo(100,50);
+	contexte.lineTo(300,150);
+	contexte.stroke();
+
+	//deuxième tracé
+	contexte.beginPath();
+	contexte.lineWidth='10';
+	contexte.strokeStyle='#C24';
+	contexte.moveTo(300,160);
+	contexte.lineTo(100,160);
+	contexte.stroke();
+
+	//troisième tracé
+	contexte.beginPath();
+	contexte.lineWidth='5';
+	contexte.strokeStyle='#A4A';
+	contexte.moveTo(100,150);
+	contexte.lineTo(300,50);
+	contexte.stroke();
+
 </script>
 
 <footer>Copyright 2018</footer>	
