@@ -25,33 +25,27 @@
 	var canvas = document.getElementById('canvas1');
 	var contexte = canvas.getContext('2d');
 
-	//premier tracé
+	//premier demi_cercle vide
 	contexte.beginPath();
 	contexte.lineWidth='5';
-	contexte.strokeStyle='#48C';
-	contexte.moveTo(100,50);
-	contexte.lineTo(300,150);
-	contexte.stroke();
+	contexte.fillStyle='#4C8';
+	contexte.arc(75,100,50,0,Math.PI);
+	contexte.fill();
 
-	//deuxième tracé
-	contexte.beginPath();
-	contexte.lineWidth='10';
-	contexte.strokeStyle='#C24';
-	contexte.moveTo(300,160);
-	contexte.lineTo(100,160);
-	contexte.stroke();
-
-	//troisième tracé
+	//cercle complet vide
 	contexte.beginPath();
 	contexte.lineWidth='5';
-	contexte.strokeStyle='#A4A';
-	contexte.moveTo(100,150);
-	contexte.lineTo(300,50);
-	contexte.stroke();
+	contexte.fillStyle='#A4A';
+	contexte.arc(200,100,50,0,2*Math.PI);
+	contexte.fill();
 
+	//demi-cercle supérieur
+	contexte.beginPath();
+	contexte.lineWidth='5';
+	contexte.fillStyle='#48C';
+	contexte.arc(325,100,50,Math.PI,2*Math.PI);
+	contexte.fill();
 
-
-	
 
 </script>
 

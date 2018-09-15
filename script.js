@@ -1179,6 +1179,48 @@ resultat.innerHTML = 'Résultat 1 : ' + res1 +
 	contexte.lineTo(300,50);
 	contexte.stroke();
 
+	//premier demi_cercle vide
+	contexte.beginPath();
+	contexte.lineWidth='5';
+	contexte.strokeStyle='#4C8';
+	contexte.arc(75,100,50,0,Math.PI);
+	contexte.stroke();
+
+	//cercle complet vide
+	contexte.beginPath();
+	contexte.lineWidth='5';
+	contexte.strokeStyle='#A4A';
+	contexte.arc(200,100,50,0,2*Math.PI);
+	contexte.stroke();
+
+	//demi-cercle supérieur
+	contexte.beginPath();
+	contexte.lineWidth='5';
+	contexte.strokeStyle='#48C';
+	contexte.arc(325,100,50,Math.PI,2*Math.PI);
+	contexte.stroke();
+
+	//premier demi_cercle plei
+	contexte.beginPath();
+	contexte.lineWidth='5';
+	contexte.fillStyle='#4C8';
+	contexte.arc(75,100,50,0,Math.PI);
+	contexte.fill();
+
+	//cercle complet plein
+	contexte.beginPath();
+	contexte.lineWidth='5';
+	contexte.fillStyle='#A4A';
+	contexte.arc(200,100,50,0,2*Math.PI);
+	contexte.fill();
+
+	//demi-cercle supérieur plein
+	contexte.beginPath();
+	contexte.lineWidth='5';
+	contexte.fillStyle='#48C';
+	contexte.arc(325,100,50,Math.PI,2*Math.PI);
+	contexte.fill();
+
 </script>
 
 <footer>Copyright 2018</footer>	
