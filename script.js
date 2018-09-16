@@ -1221,6 +1221,32 @@ resultat.innerHTML = 'Résultat 1 : ' + res1 +
 	contexte.arc(325,100,50,Math.PI,2*Math.PI);
 	contexte.fill();
 
+	//création du dégradé lineaire
+	var lineaire = contexte.createLinearGradient(100,50,300,150);
+
+	//création des couleurs du vert vers le violet en passant par le bleu
+	lineaire.addColorStop(0,'#4C8');
+	lineaire.addColorStop(0.5,'#48C');
+	lineaire.addColorStop(1,'#A4A');
+
+	//création du rectangle avec le dégradé
+	contexte.fillStyle = lineaire;
+	contexte.fillRect(100,50,200,100);
+
+	//creation du dégradé radial
+	var radial=contexte.createRadialGradient(200,100,20,200,100,75);
+
+	//creation des couleurs du vert au violet en passant par le bleu
+	radial.addColorStop(0,'#4C8');
+	radial.addColorStop(0.25,'#48C');
+	radial.addColorStop(1,'#A4A');
+
+	//creation du cercle
+	contexte.beginPath();
+	contexte.fillStyle = radial;
+	contexte.arc(200,100,75,0,2*Math.PI);
+	contexte.fill();
+
 </script>
 
 <footer>Copyright 2018</footer>	

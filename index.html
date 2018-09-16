@@ -25,27 +25,21 @@
 	var canvas = document.getElementById('canvas1');
 	var contexte = canvas.getContext('2d');
 
-	//premier demi_cercle vide
-	contexte.beginPath();
-	contexte.lineWidth='5';
-	contexte.fillStyle='#4C8';
-	contexte.arc(75,100,50,0,Math.PI);
-	contexte.fill();
+//creation du dégradé 
+var radial=contexte.createRadialGradient(200,100,20,200,100,75);
 
-	//cercle complet vide
-	contexte.beginPath();
-	contexte.lineWidth='5';
-	contexte.fillStyle='#A4A';
-	contexte.arc(200,100,50,0,2*Math.PI);
-	contexte.fill();
+//creation des couleurs du vert au violet en passant par le bleu
+radial.addColorStop(0,'#4C8');
+radial.addColorStop(0.25,'#48C');
+radial.addColorStop(1,'#A4A');
 
-	//demi-cercle supérieur
-	contexte.beginPath();
-	contexte.lineWidth='5';
-	contexte.fillStyle='#48C';
-	contexte.arc(325,100,50,Math.PI,2*Math.PI);
-	contexte.fill();
+//creation du cercle
+contexte.beginPath();
+contexte.fillStyle = radial;
+contexte.arc(200,100,75,0,2*Math.PI);
+contexte.fill();
 
+	
 
 </script>
 
