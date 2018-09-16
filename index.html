@@ -25,19 +25,16 @@
 	var canvas = document.getElementById('canvas1');
 	var contexte = canvas.getContext('2d');
 
-//creation du dégradé 
-var radial=contexte.createRadialGradient(200,100,20,200,100,75);
+	//insertion de texte creux
+	contexte.font="bold 20px Verdana,Arial,serif";
+	contexte.strokeStyle='#48B';
+	contexte.strokeText('Texte creux', 25, 100);
 
-//creation des couleurs du vert au violet en passant par le bleu
-radial.addColorStop(0,'#4C8');
-radial.addColorStop(0.25,'#48C');
-radial.addColorStop(1,'#A4A');
-
-//creation du cercle
-contexte.beginPath();
-contexte.fillStyle = radial;
-contexte.arc(200,100,75,0,2*Math.PI);
-contexte.fill();
+	//insertion de texte plein
+	contexte.font="bold 20px Verdana,Arial,serif";
+	contexte.fillStyle='#48B';
+	contexte.fillText('Texte plein', 225, 100);
+	
 
 	
 

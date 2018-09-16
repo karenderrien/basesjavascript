@@ -1247,6 +1247,16 @@ resultat.innerHTML = 'Résultat 1 : ' + res1 +
 	contexte.arc(200,100,75,0,2*Math.PI);
 	contexte.fill();
 
+	//insertion de texte creux
+	contexte.font="bold 20px Verdana,Arial,serif";
+	contexte.strokeStyle='#48B';
+	contexte.strokeText('Texte creux', 25, 100);
+
+	//insertion de texte plein
+	contexte.font="bold 20px Verdana,Arial,serif";
+	contexte.fillStyle='#48B';
+	contexte.fillText('Texte plein', 225, 100);
+
 </script>
 
 <footer>Copyright 2018</footer>	
