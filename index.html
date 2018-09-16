@@ -8,32 +8,27 @@
 	<link rel="stylesheet" type="text/css" href="style.css" />
 	<title>CANVAS ET LES RECTANGLES</title>
 	<style>
-		body{
-			margin: 0px;
-			padding: 0px;
-		}
-		#canvas1{
-			border:2px solid blue;
-		}
+		body{margin: 0px;padding: 0px;}
+		#canvas1{border:2px solid blue;}
+		#image{display: none;}
 	</style>
 </head>
 
 <body>
-<canvas id="canvas1" width="500" height="250"></canvas>
+<img id="image" src="image.jpg" alt="Exemple d'image">
+<canvas id="canvas1" width="600" height="400"></canvas>
 
 <script>
 	var canvas = document.getElementById('canvas1');
 	var contexte = canvas.getContext('2d');
+	var image=document.getElementById("image");
 
-	//insertion de texte creux
-	contexte.font="bold 20px Verdana,Arial,serif";
-	contexte.strokeStyle='#48B';
-	contexte.strokeText('Texte creux', 25, 100);
-
-	//insertion de texte plein
-	contexte.font="bold 20px Verdana,Arial,serif";
-	contexte.fillStyle='#48B';
-	contexte.fillText('Texte plein', 225, 100);
+	//dès que l'image finit de se charger, on l'affiche dans le canvas
+	image.addEventListener('load',affiche);
+	function affiche() {
+		contexte.drawImage(image,50,25,500,350);
+	}
+	
 	
 
 	

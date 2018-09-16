@@ -1259,6 +1259,45 @@ resultat.innerHTML = 'Résultat 1 : ' + res1 +
 
 </script>
 
+//exemple d'insertion d'image
+<!DOCTYPE>
+<html>
+<head>
+	
+	<meta charset="utf-8">
+	<meta name="description" value="Exercice openclassroom sur le Javascript">
+	<meta name="author" value="Karen Derrien">
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<title>CANVAS ET LES RECTANGLES</title>
+	<style>
+		body{margin: 0px;padding: 0px;}
+		#canvas1{border:2px solid blue;}
+		#image{display: none;}
+	</style>
+</head>
+
+<body>
+<img id="image" src="image.jpg" alt="Exemple d'image">
+<canvas id="canvas1" width="600" height="400"></canvas>
+
+<script>
+	var canvas = document.getElementById('canvas1');
+	var contexte = canvas.getContext('2d');
+	var image=document.getElementById("image");
+
+	//dès que l'image finit de se charger, on l'affiche dans le canvas
+	image.addEventListener('load',affiche);
+	function affiche() {
+		contexte.drawImage(image,50,25,500,350);
+	}
+	
+</script>
+
+<footer>Copyright 2018</footer>	
+	
+</body>
+</html>
+
 <footer>Copyright 2018</footer>	
 	
 </body>
