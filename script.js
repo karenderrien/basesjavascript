@@ -1303,3 +1303,52 @@ resultat.innerHTML = 'Résultat 1 : ' + res1 +
 </body>
 </html>
 */
+
+//methode rotate()
+/*<!DOCTYPE>
+<html>
+<head>
+	
+	<meta charset="utf-8">
+	<meta name="description" value="Exercice openclassroom sur le Javascript">
+	<meta name="author" value="Karen Derrien">
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<title>CANVAS ET LES RECTANGLES</title>
+	<style>
+		body{margin: 0px;padding: 0px;}
+		#canvas1{border:2px solid blue;}
+		
+	</style>
+</head>
+
+<body>
+
+<canvas id="canvas1" width="600" height="400"></canvas>
+
+<script>
+	//méthode rotate()
+	var canvas = document.getElementById('canvas1');
+	var contexte =canvas.getContext('2d');
+
+	//On crée un premier carré dans le canvas. Cette forme géométrique
+	//ne sera pas affecté par la rotation
+	contexte.fillStyle='#48A';
+	contexte.fillRect(150,25,75,75);
+
+	//carré identique avec rotation de 20 degrés (180/9)
+	contexte.rotate(Math.PI/9);
+	contexte.fillStyle='RGBa(64,192,128,0.6)';
+	contexte.fillRect(150,25,75,75);
+
+	//carré identique avec rotation de 20° qui s'accumule avec la première rotation
+	contexte.rotate(Math.PI/9);
+	contexte.fillStyle='RGBa(192,64,192,0.6)';
+	contexte.fillRect(150,25,75,75);
+	
+</script>
+
+<footer>Copyright 2018</footer>	
+	
+</body>
+</html>
+ */
