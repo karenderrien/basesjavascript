@@ -1344,6 +1344,22 @@ resultat.innerHTML = 'Résultat 1 : ' + res1 +
 	contexte.rotate(Math.PI/9);
 	contexte.fillStyle='RGBa(192,64,192,0.6)';
 	contexte.fillRect(150,25,75,75);
+
+	//méthode translate()
+	var canvas = document.getElementById('canvas1');
+	var contexte =canvas.getContext('2d');
+
+	//on crée un premier carré bleu
+	contexte.fillStyle='#48A';
+	contexte.fillRect(10,10,75,75);
+
+	//on utilise translate() pour redéfinir notre point
+	//de reference- Nos dessins démarrerons de (75,75) au lieu du (0,0) habituel
+	contexte.translate(75,75);
+
+	//le deuxième carré commence à (10+75,10+75)
+	contexte.fillStyle='RGB(64,192,128)';
+	contexte.fillRect(10,10,75,75);
 	
 </script>
 
