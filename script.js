@@ -1304,7 +1304,7 @@ resultat.innerHTML = 'Résultat 1 : ' + res1 +
 </html>
 */
 
-//methode rotate()
+/*......methode rotate() et translate()....*/
 /*<!DOCTYPE>
 <html>
 <head>
@@ -1326,7 +1326,7 @@ resultat.innerHTML = 'Résultat 1 : ' + res1 +
 <canvas id="canvas1" width="600" height="400"></canvas>
 
 <script>
-	//méthode rotate()
+	//.....méthode rotate()
 	var canvas = document.getElementById('canvas1');
 	var contexte =canvas.getContext('2d');
 
@@ -1345,7 +1345,7 @@ resultat.innerHTML = 'Résultat 1 : ' + res1 +
 	contexte.fillStyle='RGBa(192,64,192,0.6)';
 	contexte.fillRect(150,25,75,75);
 
-	//méthode translate()
+	//.....méthode translate()
 	var canvas = document.getElementById('canvas1');
 	var contexte =canvas.getContext('2d');
 
@@ -1360,6 +1360,33 @@ resultat.innerHTML = 'Résultat 1 : ' + res1 +
 	//le deuxième carré commence à (10+75,10+75)
 	contexte.fillStyle='RGB(64,192,128)';
 	contexte.fillRect(10,10,75,75);
+
+	//.....méthode translate() et rotate ensemble
+	var canvas = document.getElementById('canvas1');
+	var contexte =canvas.getContext('2d');
+
+	//on défini le point de depart de nos dessins
+	// au centre du canvas
+	contexte.translate(300,200);
+
+	//on crée un premier carré bleu
+	contexte.fillStyle='#48A';
+	contexte.fillRect(0,0,75,75);
+
+	//rotation de 90° du deuxième carré
+	contexte.rotate(Math.PI/2);
+	contexte.fillStyle='RGB(64,192,128)';
+	contexte.fillRect(0,0,75,75);
+
+	//rotation de + 90°
+	contexte.rotate(Math.PI/2);
+	contexte.fillStyle='#A3A';
+	contexte.fillRect(0,0,75,75);
+
+	//rotation de + 90°
+	contexte.rotate(Math.PI/2);
+	contexte.fillStyle='#E85';
+	contexte.fillRect(0,0,75,75);
 	
 </script>
 

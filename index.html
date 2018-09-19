@@ -19,22 +19,36 @@
 <canvas id="canvas1" width="600" height="400"></canvas>
 
 <script>
-	//méthode translate()
+	//méthode translate() et rotate ensemble
 	var canvas = document.getElementById('canvas1');
 	var contexte =canvas.getContext('2d');
 
+	//on défini le point de depart de nos dessins
+	// au centre du canvas
+	contexte.translate(300,200);
+
 	//on crée un premier carré bleu
 	contexte.fillStyle='#48A';
-	contexte.fillRect(10,10,75,75);
+	contexte.fillRect(0,0,75,75);
 
-	//on utilise translate() pour redéfinir notre point
-	//de reference- Nos dessins démarrerons de (75,75) au lieu du (0,0) habituel
-	contexte.translate(75,75);
-
-	//le deuxième carré commence à (10+75,10+75)
+	//rotation de 90° du deuxième carré
+	contexte.rotate(Math.PI/2);
 	contexte.fillStyle='RGB(64,192,128)';
-	contexte.fillRect(10,10,75,75);
-		
+	contexte.fillRect(0,0,75,75);
+
+	//rotation de + 90°
+	contexte.rotate(Math.PI/2);
+	contexte.fillStyle='#A3A';
+	contexte.fillRect(0,0,75,75);
+
+	//rotation de + 90°
+	contexte.rotate(Math.PI/2);
+	contexte.fillStyle='#E85';
+	contexte.fillRect(0,0,75,75);
+
+	
+
+
 </script>
 
 <footer>Copyright 2018</footer>	
